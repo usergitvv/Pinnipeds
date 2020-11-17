@@ -65,7 +65,40 @@ display: inline-block; vertical-align: middle; text-align: center;
 {
 	width: 50%; height: auto; display: block; text-align: center; margin-top: 20px; margin-bottom: 20px; background-color: #0fc; margin-left: auto;
 	margin-right: auto; outline-color: blue; outline-width: 2px; outline-style: solid;    
-} */ 	   
+} */ 
+@media screen and (max-width: 480px), screen and (max-width: 768px) {
+	   	.text3 img {
+	   		width: 360px;
+	   		height: 239px;
+	   		}
+	   		.text4 img {
+	   			width: 320px;
+	   			height: 193px;
+	   		}
+	   		.text5 img {
+	   			width: 380px;
+	   			height: 214px;
+	   		}
+	   	.picture1 {background: url("Walrus1.png"); grid-area: picture1;}	
+	   	.picture1:active {position: absolute; background: url("Mobile/Walrus1.png"); width: 420px; height: 236px; z-index: 1;}
+	   	.picture2 {background: url("Nerpa1.png"); grid-area: picture2;}
+	   	.picture2:active {position: absolute; background: url("Mobile/Nerpa1.png"); margin-top: calc(100% - 282px); width: 420px; height: 282px; z-index: 1;}
+	   	.picture3 {background: url("Lev1.jpg"); grid-area: picture3;}
+	   	.picture3:active {position: absolute; background: url("Mobile/Lev1.jpg"); margin-left: calc(100% - 420px); width: 420px; height: 279px; z-index: 1;}
+	   	.picture4 {background: url("Elephant1.jpg"); grid-area: picture4;}
+	   	.picture4:active {position: absolute; background: url("Mobile/Elephant1.jpg"); margin-top: calc(100% - 267px);
+	   	 width: 400px; height: 267px; z-index: 1;}
+	   	.picture5 {background: url("Kotik1.jpg"); grid-area: picture5;}
+	   	.picture5:active {position: absolute; background: url("Mobile/Kotik1.jpg"); margin-left: calc(100% - 420px);
+	   	margin-top: calc(100% - 279px); width: 420px; height: 279px; z-index: 1;}
+
+iframe.morzh1 {width: auto; height: auto;}
+ iframe.slon1 {width: auto; height: auto;}
+ iframe.morskoj-kotik1 {width: auto; height: auto;}
+ video.b-nerpa1 {width: 75%; height: auto;}
+ video.morskoylev1 {width: auto; height: auto;}	   
+ }
+ 
 </style>
 </head>
 <body>
@@ -81,6 +114,8 @@ display: inline-block; vertical-align: middle; text-align: center;
 	<li><a href="#sealion3">Морской лев</a></li>
 	<li><a href="#seaelephant4">Морской слон</a></li>
 	<li><a href="#furseal5">Морской котик</a></li>
+	<li><a href="#pictures5">Картинки</a></li>
+	<li><a href="#video5">Видео</a></li>
 	<li><a href="#head0">(Вернуться наверх)</a></li>
 </ol>
 </nav>
@@ -359,6 +394,7 @@ display: inline-block; vertical-align: middle; text-align: center;
  </article>
  </section>
  </main>
+ <a  id="pictures5"></a>
  <p style="font-size: large; padding-left: 20px; font-weight: bold;"><i>Для вывода подсказки наведите курсор на изображение, для просмотра - наведите курсор на изображение,   нажмите и удерживайте левую кнопку мыши</i></p>
  <section class="pictures">
  <div class="picture1" title="Морж"></div>
@@ -367,31 +403,33 @@ display: inline-block; vertical-align: middle; text-align: center;
  <div class="picture4" title="Морской слон"></div>
  <div class="picture5" title="Морсокй котик"></div>
  </section>
+ <a id="video5"></a>
  <h3 style="margin-top: 10px; text-align: center; color: white; font-style: italic; background-color: blue; padding-top: 10px; padding-bottom: 10px;">
  И немного видео по теме
 </h3>
  <div class="video">
  	<div class="morzh" data-video>
- 		 		<iframe src="https://youtube.com/embed/qeLMnx80u2g" width="480" height="270" allowfullscreen></iframe>
+ 		 		<iframe class="morzh1" src="https://youtube.com/embed/qeLMnx80u2g" width="480" height="270" allowfullscreen></iframe>
  		 		<p class="text-v">Моржи</p> 
  			</div>
  	<div class="b-nerpa" data-video>
- 		<video width="480" height="270" controls="" src="Байкальские нерпы.mp4"> 			
+ 		<video class="b-nerpa1" width="480" height="270" controls="">
+ 		<source src="Байкальские нерпы.mp4" type="video/mp4"> 			
  		</video>
  		<p class="text-v">Байкальская нерпа</p>
  	</div>
  	<div class="morskoylev" data-video>
- 		<video width="480" height="270" controls="">
+ 		<video class="morskoylev1" width="480" height="270" controls="">
  		<source src="Морской лев.mp4" type="video/mp4">
  	</video>
  	<p class="text-v">Морской лев</p>
  	</div>
  	<div class="slon" data-video>
- 		<iframe src="https://my.mail.ru/video/embed/1930195007612912078" width="626" height="367" allowfullscreen></iframe>
+ 		<iframe class="slon1" src="https://my.mail.ru/video/embed/1930195007612912078" width="480" height="270" allowfullscreen></iframe>
  		<p class="text-v">Морской слон</p>
  	</div>
  	<div class="morskoj-kotik" data-video>
- 		<iframe src="https://my.mail.ru/video/embed/3165058329244405808" width="626" height="367" allowfullscreen></iframe>
+ 		<iframe class="morskoj-kotik1" src="https://my.mail.ru/video/embed/3165058329244405808" width="626" height="367" allowfullscreen></iframe>
  			<p class="text-v">Морские котики</p>
  	</div>
  </div>
@@ -415,6 +453,8 @@ display: inline-block; vertical-align: middle; text-align: center;
 	<li><a href="#sealion3">Морской лев</a></li>
 	<li><a href="#seaelephant4">Морской слон</a></li>
 	<li><a href="#furseal5">Морской котик</a></li>
+	<li><a href="#pictures5">Картинки</a></li>
+	<li><a href="#video5">Видео</a></li>
 	<li><a href="#head0">(Вернуться наверх)</a></li>
 </ol>
 </nav>
